@@ -1,10 +1,14 @@
-image: Ubuntu1804  # образ для сборки
+image: Ubuntu
 
 branches:
   only:
-    - master  # ветка git
+    - master
 
-build: off  # будем использовать свой скрипт сборки
+build: off
+
+install:
+
+  - java -jar ./artifacts/app-mbank.jar
 
 build_script:
   - chmod +x gradlew
